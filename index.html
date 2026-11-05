@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zakar Nahapetyan</title>
+  <meta name="description" content="Senior Product Engineer with 15+ years of experience building web and mobile products.">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://znahapetyan.github.io/">
+  <meta property="og:title" content="Zakar Nahapetyan, Senior Product Engineer">
+  <meta property="og:description" content="Senior Product Engineer with 15+ years of experience. Demos of my side projects, Claude Canvas and Mac Island.">
+  <meta property="og:image" content="https://znahapetyan.github.io/media/claude-canvas.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face { font-family: "Inter"; src: url("fonts/inter-latin-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "Inter"; src: url("fonts/inter-latin-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+    @font-face { font-family: "Inter"; src: url("fonts/inter-latin-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+    :root {
+      --bg: #ffffff;
+      --ink: #15181e;
+      --body: #3a404b;
+      --muted: #646b78;
+      --rule: #e3e6ec;
+      --accent: #2847b5;
+      --frame: #0d0f13;
+      --shadow: 0 1px 2px rgb(16 24 40 / 0.06), 0 12px 32px -8px rgb(16 24 40 / 0.18);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1014;
+        --ink: #eef0f4;
+        --body: #c3c8d1;
+        --muted: #8b93a1;
+        --rule: #262a32;
+        --accent: #8ea4ff;
+        --frame: #000000;
+        --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -8px rgb(0 0 0 / 0.6);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--body);
+      font-family: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p, li { text-wrap: pretty; } /* avoids a single word alone on the last line */
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- header ---------- */
+
+    header { padding: 88px 0 8px; }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    .headline {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+    .headline strong { color: var(--accent); font-weight: 600; }
+
+    .summary {
+      max-width: 640px;
+      margin: 24px 0 0;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    /* ---------- sections ---------- */
+
+    .section { margin-top: 80px; }
+
+    h2 {
+      margin: 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
+
+    /* ---------- projects ---------- */
+
+    .project { margin-top: 56px; }
+    .project + .project { margin-top: 96px; }
+
+    h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .video {
+      margin: 24px 0 0;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--frame);
+      box-shadow: var(--shadow);
+    }
+    .video video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .about {
+      max-width: 640px;
+      margin-top: 28px;
+    }
+    .about p { margin: 0; }
+
+    .details {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .details li {
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+    /* Inline bullet dot, matching the CV. */
+    .details li::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 12px 0 -18px;
+      border-radius: 50%;
+      background: var(--accent);
+      vertical-align: 0.18em;
+    }
+
+    .about .stack {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .stack strong { color: var(--ink); font-weight: 600; margin-right: 0.3em; }
+
+    /* ---------- footer ---------- */
+
+    footer {
+      margin-top: 112px;
+      padding: 24px 0 48px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ---------- small screens ---------- */
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .page { padding: 0 16px; }
+      header { padding-top: 48px; }
+      h1 { font-size: 32px; }
+      .headline { font-size: 17px; }
+      .section { margin-top: 56px; }
+      .project { margin-top: 40px; }
+      .project + .project { margin-top: 72px; }
+      h3 { font-size: 22px; }
+      .tagline { font-size: 16px; }
+      .video { border-radius: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Zakar Nahapetyan</h1>
+      <p class="headline"><strong>Senior Product Engineer</strong></p>
+      <p class="summary">Product engineer with 15+ years of experience building web and mobile products, combining strong frontend engineering with a focus on UX. I take features from customer feedback and usage data through to release, turning complex workflows into simple ones.</p>
+      <ul class="links">
+        <li><a href="mailto:znahapetyan@gmail.com">znahapetyan@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/znahapetyan">LinkedIn</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="projects">
+        <h2 id="projects">Side projects</h2>
+        <p class="section-intro">Tools I built for my own workflow.</p>
+
+        <article class="project">
+          <h3>Claude Canvas</h3>
+          <p class="tagline">All your Claude Code conversations on one canvas</p>
+          <div class="video">
+            <video src="media/claude-canvas.mp4" poster="media/claude-canvas.jpg"
+                   width="1920" height="1200" muted loop playsinline controls preload="metadata"
+                   aria-label="Demo of Claude Canvas"></video>
+          </div>
+          <div class="about">
+            <p>Each Claude Code conversation is a card with its title, latest message, and live status, so I can see at a glance which ones are working, finished, or waiting for me. Conversations started in a terminal appear on their own, and a click jumps back to the right Warp tab. I use it every day, at work and on all my projects.</p>
+            <ul class="details">
+              <li>Drag cards into groups, add titles, and leave yourself notes on any card.</li>
+              <li>Pull requests a conversation opened show on its card, with their current state.</li>
+              <li>A small Node server with no dependencies watches Claude Code's session files and pushes changes to the page.</li>
+            </ul>
+            <p class="stack"><strong>Built with</strong> JavaScript, Node.js</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Mac Island</h3>
+          <p class="tagline">A Dynamic Island for the MacBook notch</p>
+          <div class="video">
+            <video src="media/mac-island.mp4" poster="media/mac-island.jpg"
+                   width="1920" height="1080" muted loop playsinline controls preload="metadata"
+                   aria-label="Demo of Mac Island"></video>
+          </div>
+          <div class="about">
+            <p>Turns the notch into a small, useful space: what's playing, a drag-and-drop file shelf, and my own tools one click away.</p>
+            <ul class="details">
+              <li>Shows what's playing in any app, from Spotify to YouTube in a browser, with a full player that opens from the notch.</li>
+              <li>A file shelf: drop files in and drag them out later. New screenshots land there on their own.</li>
+              <li>Shows AirPods battery when they connect, and starts Claude Canvas from a Tools tab.</li>
+            </ul>
+            <p class="stack"><strong>Built with</strong> Swift, SwiftUI, AppKit, and Claude Code</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>Zakar Nahapetyan · 2026</footer>
+  </div>
+
+  <script>
+    // Play each demo only while it's on screen, and not at all for people who prefer reduced motion.
+    (function () {
+      var videos = document.querySelectorAll(".video video");
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || !("IntersectionObserver" in window)) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var video = entry.target;
+          if (entry.isIntersecting) {
+            var playing = video.play();
+            if (playing && playing.catch) playing.catch(function () {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.4 });
+
+      videos.forEach(function (video) { observer.observe(video); });
+    })();
+  </script>
+</body>
+</html>
