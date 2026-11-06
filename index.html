@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://znahapetyan.github.io/">
   <meta property="og:title" content="Zakar Nahapetyan, Senior Product Engineer">
-  <meta property="og:description" content="Senior Product Engineer with 15+ years of experience. Demos of my side projects, Claude Canvas and Mac Island.">
+  <meta property="og:description" content="Senior Product Engineer with 15+ years of experience. Quick Compare at Version Story, plus demos of my side projects, Claude Canvas and Mac Island.">
   <meta property="og:image" content="https://znahapetyan.github.io/media/claude-canvas.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -188,6 +188,32 @@
       vertical-align: 0.18em;
     }
 
+    /* ---------- screenshots ---------- */
+
+    .shots { margin-top: 32px; }
+
+    .shot { margin: 0; }
+    .shot + .shot { margin-top: 40px; }
+
+    .shot a {
+      display: block;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      cursor: zoom-in;
+    }
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .shot figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     .about .stack {
       margin: 20px 0 0;
       color: var(--muted);
@@ -219,6 +245,8 @@
       h3 { font-size: 22px; }
       .tagline { font-size: 16px; }
       .video { border-radius: 8px; }
+      .shot a { border-radius: 8px; }
+      .shot + .shot { margin-top: 32px; }
     }
   </style>
 </head>
@@ -235,6 +263,48 @@
     </header>
 
     <main>
+      <section class="section" aria-labelledby="work">
+        <h2 id="work">Work</h2>
+        <p class="section-intro">From my current role at <a href="https://www.versionstory.com/">Version Story</a>, a document comparison tool for law firms. Screenshots use demo documents.</p>
+
+        <article class="project" id="quick-compare">
+          <h3>Quick Compare</h3>
+          <p class="tagline">Compare contract drafts from the first screen</p>
+          <div class="about">
+            <p>New users had to create a project before they could compare anything, but many just wanted to see what changed between two drafts. I pitched putting comparison on the first page, prototyped it, and shipped it: originals on one side, modified versions on the other, and each pair gets a redline to open or download.</p>
+            <ul class="details">
+              <li>New users' time to their first comparison went from about 10 minutes to about 4.</li>
+              <li>Usage grew about 10x and brought in many new customers.</li>
+            </ul>
+            <p class="stack"><strong>Built with</strong> React, TypeScript</p>
+          </div>
+
+          <div class="shots">
+            <figure class="shot">
+              <a href="media/quick-compare-1-empty.png">
+                <img src="media/quick-compare-1-empty.png" width="2886" height="1680" loading="lazy"
+                     alt="Version Story's first screen: drop zones for original versions on the left and modified versions on the right, above the document list.">
+              </a>
+              <figcaption>The first screen. Drop originals on the left and modified versions on the right.</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="media/quick-compare-2-versions.png">
+                <img src="media/quick-compare-2-versions.png" width="2886" height="1680" loading="lazy"
+                     alt="A Master Services Agreement compared against client comments and the provider's response, and a Mutual NDA against its revised version. Both are saved in the document list below.">
+              </a>
+              <figcaption>One original against several versions at once. Every comparison is also saved to the document list with its versions.</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="media/quick-compare-3-redline.png">
+                <img src="media/quick-compare-3-redline.png" width="2886" height="1680" loading="lazy"
+                     alt="Redline of the Master Services Agreement with tracked changes in the document and a list of revisions on the right.">
+              </a>
+              <figcaption>Each pair opens as a redline, with tracked changes and a list of revisions.</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+
       <section class="section" aria-labelledby="projects">
         <h2 id="projects">Side projects</h2>
         <p class="section-intro">Tools I built for my own workflow.</p>
